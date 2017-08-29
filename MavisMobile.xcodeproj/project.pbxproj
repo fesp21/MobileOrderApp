@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		900324F31F55D8CE0081E02A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900324F21F55D8CE0081E02A /* AppDelegate.swift */; };
+		900324F51F55D8CE0081E02A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900324F41F55D8CE0081E02A /* ViewController.swift */; };
+		900324F81F55D8CE0081E02A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900324F61F55D8CE0081E02A /* Main.storyboard */; };
+		900324FA1F55D8CE0081E02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900324F91F55D8CE0081E02A /* Assets.xcassets */; };
+		900324FD1F55D8CE0081E02A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900324FB1F55D8CE0081E02A /* LaunchScreen.storyboard */; };
+		900325081F55D8CE0081E02A /* MavisMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900325071F55D8CE0081E02A /* MavisMobileTests.swift */; };
+		900325131F55D8CE0081E02A /* MavisMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900325121F55D8CE0081E02A /* MavisMobileUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		900325041F55D8CE0081E02A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 900324E71F55D8CE0081E02A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 900324EE1F55D8CE0081E02A;
+			remoteInfo = MavisMobile;
+		};
+		9003250F1F55D8CE0081E02A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 900324E71F55D8CE0081E02A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 900324EE1F55D8CE0081E02A;
+			remoteInfo = MavisMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		900324EF1F55D8CE0081E02A /* MavisMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MavisMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		900324F21F55D8CE0081E02A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		900324F41F55D8CE0081E02A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		900324F71F55D8CE0081E02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		900324F91F55D8CE0081E02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		900324FC1F55D8CE0081E02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		900324FE1F55D8CE0081E02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		900325031F55D8CE0081E02A /* MavisMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MavisMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		900325071F55D8CE0081E02A /* MavisMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MavisMobileTests.swift; sourceTree = "<group>"; };
+		900325091F55D8CE0081E02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9003250E1F55D8CE0081E02A /* MavisMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MavisMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		900325121F55D8CE0081E02A /* MavisMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MavisMobileUITests.swift; sourceTree = "<group>"; };
+		900325141F55D8CE0081E02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		900324EC1F55D8CE0081E02A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		900325001F55D8CE0081E02A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9003250B1F55D8CE0081E02A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		900324E61F55D8CE0081E02A = {
+			isa = PBXGroup;
+			children = (
+				900324F11F55D8CE0081E02A /* MavisMobile */,
+				900325061F55D8CE0081E02A /* MavisMobileTests */,
+				900325111F55D8CE0081E02A /* MavisMobileUITests */,
+				900324F01F55D8CE0081E02A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		900324F01F55D8CE0081E02A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				900324EF1F55D8CE0081E02A /* MavisMobile.app */,
+				900325031F55D8CE0081E02A /* MavisMobileTests.xctest */,
+				9003250E1F55D8CE0081E02A /* MavisMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		900324F11F55D8CE0081E02A /* MavisMobile */ = {
+			isa = PBXGroup;
+			children = (
+				900324F21F55D8CE0081E02A /* AppDelegate.swift */,
+				900324F41F55D8CE0081E02A /* ViewController.swift */,
+				900324F61F55D8CE0081E02A /* Main.storyboard */,
+				900324F91F55D8CE0081E02A /* Assets.xcassets */,
+				900324FB1F55D8CE0081E02A /* LaunchScreen.storyboard */,
+				900324FE1F55D8CE0081E02A /* Info.plist */,
+			);
+			path = MavisMobile;
+			sourceTree = "<group>";
+		};
+		900325061F55D8CE0081E02A /* MavisMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				900325071F55D8CE0081E02A /* MavisMobileTests.swift */,
+				900325091F55D8CE0081E02A /* Info.plist */,
+			);
+			path = MavisMobileTests;
+			sourceTree = "<group>";
+		};
+		900325111F55D8CE0081E02A /* MavisMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				900325121F55D8CE0081E02A /* MavisMobileUITests.swift */,
+				900325141F55D8CE0081E02A /* Info.plist */,
+			);
+			path = MavisMobileUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		900324EE1F55D8CE0081E02A /* MavisMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 900325171F55D8CE0081E02A /* Build configuration list for PBXNativeTarget "MavisMobile" */;
+			buildPhases = (
+				900324EB1F55D8CE0081E02A /* Sources */,
+				900324EC1F55D8CE0081E02A /* Frameworks */,
+				900324ED1F55D8CE0081E02A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MavisMobile;
+			productName = MavisMobile;
+			productReference = 900324EF1F55D8CE0081E02A /* MavisMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		900325021F55D8CE0081E02A /* MavisMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9003251A1F55D8CE0081E02A /* Build configuration list for PBXNativeTarget "MavisMobileTests" */;
+			buildPhases = (
+				900324FF1F55D8CE0081E02A /* Sources */,
+				900325001F55D8CE0081E02A /* Frameworks */,
+				900325011F55D8CE0081E02A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				900325051F55D8CE0081E02A /* PBXTargetDependency */,
+			);
+			name = MavisMobileTests;
+			productName = MavisMobileTests;
+			productReference = 900325031F55D8CE0081E02A /* MavisMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9003250D1F55D8CE0081E02A /* MavisMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9003251D1F55D8CE0081E02A /* Build configuration list for PBXNativeTarget "MavisMobileUITests" */;
+			buildPhases = (
+				9003250A1F55D8CE0081E02A /* Sources */,
+				9003250B1F55D8CE0081E02A /* Frameworks */,
+				9003250C1F55D8CE0081E02A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				900325101F55D8CE0081E02A /* PBXTargetDependency */,
+			);
+			name = MavisMobileUITests;
+			productName = MavisMobileUITests;
+			productReference = 9003250E1F55D8CE0081E02A /* MavisMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		900324E71F55D8CE0081E02A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Paul Sun";
+				TargetAttributes = {
+					900324EE1F55D8CE0081E02A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BN97K9QK4D;
+						ProvisioningStyle = Automatic;
+					};
+					900325021F55D8CE0081E02A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BN97K9QK4D;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 900324EE1F55D8CE0081E02A;
+					};
+					9003250D1F55D8CE0081E02A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BN97K9QK4D;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 900324EE1F55D8CE0081E02A;
+					};
+				};
+			};
+			buildConfigurationList = 900324EA1F55D8CE0081E02A /* Build configuration list for PBXProject "MavisMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 900324E61F55D8CE0081E02A;
+			productRefGroup = 900324F01F55D8CE0081E02A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				900324EE1F55D8CE0081E02A /* MavisMobile */,
+				900325021F55D8CE0081E02A /* MavisMobileTests */,
+				9003250D1F55D8CE0081E02A /* MavisMobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		900324ED1F55D8CE0081E02A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900324FD1F55D8CE0081E02A /* LaunchScreen.storyboard in Resources */,
+				900324FA1F55D8CE0081E02A /* Assets.xcassets in Resources */,
+				900324F81F55D8CE0081E02A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		900325011F55D8CE0081E02A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9003250C1F55D8CE0081E02A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		900324EB1F55D8CE0081E02A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900324F51F55D8CE0081E02A /* ViewController.swift in Sources */,
+				900324F31F55D8CE0081E02A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		900324FF1F55D8CE0081E02A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900325081F55D8CE0081E02A /* MavisMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9003250A1F55D8CE0081E02A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900325131F55D8CE0081E02A /* MavisMobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		900325051F55D8CE0081E02A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 900324EE1F55D8CE0081E02A /* MavisMobile */;
+			targetProxy = 900325041F55D8CE0081E02A /* PBXContainerItemProxy */;
+		};
+		900325101F55D8CE0081E02A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 900324EE1F55D8CE0081E02A /* MavisMobile */;
+			targetProxy = 9003250F1F55D8CE0081E02A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		900324F61F55D8CE0081E02A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				900324F71F55D8CE0081E02A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		900324FB1F55D8CE0081E02A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				900324FC1F55D8CE0081E02A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		900325151F55D8CE0081E02A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		900325161F55D8CE0081E02A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		900325181F55D8CE0081E02A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BN97K9QK4D;
+				INFOPLIST_FILE = MavisMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sun.MavisMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		900325191F55D8CE0081E02A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BN97K9QK4D;
+				INFOPLIST_FILE = MavisMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sun.MavisMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9003251B1F55D8CE0081E02A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BN97K9QK4D;
+				INFOPLIST_FILE = MavisMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sun.MavisMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MavisMobile.app/MavisMobile";
+			};
+			name = Debug;
+		};
+		9003251C1F55D8CE0081E02A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BN97K9QK4D;
+				INFOPLIST_FILE = MavisMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sun.MavisMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MavisMobile.app/MavisMobile";
+			};
+			name = Release;
+		};
+		9003251E1F55D8CE0081E02A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BN97K9QK4D;
+				INFOPLIST_FILE = MavisMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sun.MavisMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MavisMobile;
+			};
+			name = Debug;
+		};
+		9003251F1F55D8CE0081E02A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BN97K9QK4D;
+				INFOPLIST_FILE = MavisMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sun.MavisMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MavisMobile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		900324EA1F55D8CE0081E02A /* Build configuration list for PBXProject "MavisMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900325151F55D8CE0081E02A /* Debug */,
+				900325161F55D8CE0081E02A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		900325171F55D8CE0081E02A /* Build configuration list for PBXNativeTarget "MavisMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900325181F55D8CE0081E02A /* Debug */,
+				900325191F55D8CE0081E02A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9003251A1F55D8CE0081E02A /* Build configuration list for PBXNativeTarget "MavisMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9003251B1F55D8CE0081E02A /* Debug */,
+				9003251C1F55D8CE0081E02A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9003251D1F55D8CE0081E02A /* Build configuration list for PBXNativeTarget "MavisMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9003251E1F55D8CE0081E02A /* Debug */,
+				9003251F1F55D8CE0081E02A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 900324E71F55D8CE0081E02A /* Project object */;
+}
