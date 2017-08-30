@@ -20,7 +20,6 @@
 		9038546F1F55EF27001691F1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038546E1F55EF27001691F1 /* CustomCell.swift */; };
 		903854711F560848001691F1 /* SelectFromMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903854701F560848001691F1 /* SelectFromMain.swift */; };
 		904DE5C61F564415007234C2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904DE5C51F564415007234C2 /* APIClient.swift */; };
-		904DE5D01F564D9C007234C2 /* web.rb in Resources */ = {isa = PBXBuildFile; fileRef = 904DE5CF1F564D9C007234C2 /* web.rb */; };
 		90A7E59E1F562C5300E08E57 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7E59D1F562C5300E08E57 /* OrdersView.swift */; };
 		90A7E5A21F5631DC00E08E57 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7E5A11F5631DC00E08E57 /* Add.swift */; };
 		90A7E5C21F56375500E08E57 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7E5C11F56375500E08E57 /* CheckoutView.swift */; };
@@ -76,7 +75,6 @@
 		9038546E1F55EF27001691F1 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		903854701F560848001691F1 /* SelectFromMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFromMain.swift; sourceTree = "<group>"; };
 		904DE5C51F564415007234C2 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		904DE5CF1F564D9C007234C2 /* web.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = web.rb; path = "../../Stripe-Mavis1/web.rb"; sourceTree = "<group>"; };
 		90A7E59D1F562C5300E08E57 /* OrdersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrdersView.swift; path = ../OrdersView.swift; sourceTree = "<group>"; };
 		90A7E5A11F5631DC00E08E57 /* Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 		90A7E5C11F56375500E08E57 /* CheckoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckoutView.swift; path = ../CheckoutView.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 		900325061F55D8CE0081E02A /* MavisMobileTests */ = {
 			isa = PBXGroup;
 			children = (
-				904DE5CF1F564D9C007234C2 /* web.rb */,
 				900325071F55D8CE0081E02A /* MavisMobileTests.swift */,
 				900325091F55D8CE0081E02A /* Info.plist */,
 			);
@@ -323,7 +320,6 @@
 			files = (
 				900324FD1F55D8CE0081E02A /* LaunchScreen.storyboard in Resources */,
 				900324FA1F55D8CE0081E02A /* Assets.xcassets in Resources */,
-				904DE5D01F564D9C007234C2 /* web.rb in Resources */,
 				900324F81F55D8CE0081E02A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
