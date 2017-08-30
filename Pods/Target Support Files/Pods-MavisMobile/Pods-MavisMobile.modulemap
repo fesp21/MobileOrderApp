@@ -1,0 +1,6 @@
+framework module Pods_MavisMobile {
+  umbrella header "Pods-MavisMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
