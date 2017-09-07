@@ -23,6 +23,8 @@
 		90A7E59E1F562C5300E08E57 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7E59D1F562C5300E08E57 /* OrdersView.swift */; };
 		90A7E5A21F5631DC00E08E57 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7E5A11F5631DC00E08E57 /* Add.swift */; };
 		90A7E5C21F56375500E08E57 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7E5C11F56375500E08E57 /* CheckoutView.swift */; };
+		90B8A8131F5F397600C7EB53 /* CheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8A8121F5F397600C7EB53 /* CheckoutRowView.swift */; };
+		90BB855A1F5A37B300B1CD44 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90BB85591F5A37B300B1CD44 /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		90A7E59D1F562C5300E08E57 /* OrdersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrdersView.swift; path = ../OrdersView.swift; sourceTree = "<group>"; };
 		90A7E5A11F5631DC00E08E57 /* Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 		90A7E5C11F56375500E08E57 /* CheckoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckoutView.swift; path = ../CheckoutView.swift; sourceTree = "<group>"; };
+		90B8A8121F5F397600C7EB53 /* CheckoutRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRowView.swift; sourceTree = "<group>"; };
+		90BB85591F5A37B300B1CD44 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../Library/Developer/Xcode/DerivedData/MavisMobile-ehrrdahxghgcrdabjgqgwmbnpzot/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
 		A8D6B44CD3D7D16CD6D741BF /* Pods-MavisMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MavisMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MavisMobile/Pods-MavisMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		B04C4D711A68E8A185C5BDB8 /* Pods_MavisMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MavisMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F8354FD8FC2F1BA971799A /* Pods-MavisMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MavisMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MavisMobileUITests/Pods-MavisMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BB855A1F5A37B300B1CD44 /* AFNetworking.framework in Frameworks */,
 				2E33270F80D898285A9521FC /* Pods_MavisMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +123,7 @@
 		2FB22F8D46B231B1635EB3DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90BB85591F5A37B300B1CD44 /* AFNetworking.framework */,
 				BF77CC161234B8C82F0940C0 /* Pods_MavisMobile.framework */,
 				494287287FB294335195FA9A /* Pods_MavisMobileTests.framework */,
 				B04C4D711A68E8A185C5BDB8 /* Pods_MavisMobileUITests.framework */,
@@ -141,6 +147,7 @@
 		900324E61F55D8CE0081E02A = {
 			isa = PBXGroup;
 			children = (
+				90B8A8121F5F397600C7EB53 /* CheckoutRowView.swift */,
 				900324F11F55D8CE0081E02A /* MavisMobile */,
 				900325061F55D8CE0081E02A /* MavisMobileTests */,
 				900325111F55D8CE0081E02A /* MavisMobileUITests */,
@@ -166,6 +173,7 @@
 				900324F21F55D8CE0081E02A /* AppDelegate.swift */,
 				9038546E1F55EF27001691F1 /* CustomCell.swift */,
 				9038546B1F55E19C001691F1 /* Menu.swift */,
+				904DE5C51F564415007234C2 /* APIClient.swift */,
 				90A7E5C11F56375500E08E57 /* CheckoutView.swift */,
 				903854701F560848001691F1 /* SelectFromMain.swift */,
 				90A7E59D1F562C5300E08E57 /* OrdersView.swift */,
@@ -175,7 +183,6 @@
 				900324FE1F55D8CE0081E02A /* Info.plist */,
 				9038546D1F55EE3A001691F1 /* Header.h */,
 				90A7E5A11F5631DC00E08E57 /* Add.swift */,
-				904DE5C51F564415007234C2 /* APIClient.swift */,
 			);
 			path = MavisMobile;
 			sourceTree = "<group>";
@@ -366,11 +373,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MavisMobile/Pods-MavisMobile-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 			);
@@ -498,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90A7E59E1F562C5300E08E57 /* OrdersView.swift in Sources */,
+				90B8A8131F5F397600C7EB53 /* CheckoutRowView.swift in Sources */,
 				9038546C1F55E19C001691F1 /* Menu.swift in Sources */,
 				90A7E5A21F5631DC00E08E57 /* Add.swift in Sources */,
 				904DE5C61F564415007234C2 /* APIClient.swift in Sources */,

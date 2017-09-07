@@ -438,31 +438,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apF-g4-2Ex" customClass="STPPaymentCardTextField">
-                                <rect key="frame" x="0.0" y="110" width="375" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bB0-iQ-Fl5">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bB0-iQ-Fl5">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="e3v-xh-bbM"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Checkout" id="7Bk-kI-OGr">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="268-3J-BZ4"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E1-1Y-HTn">
+                                <rect key="frame" x="89" y="121" width="183" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Handle Payments"/>
+                                <connections>
+                                    <action selector="handlePaymentButtonTapped:" destination="Q4r-cx-GM3" eventType="touchUpInside" id="52s-tr-2gt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bB0-iQ-Fl5" firstAttribute="leading" secondItem="KHB-dj-iKo" secondAttribute="leading" id="4ot-2W-hUg"/>
+                            <constraint firstAttribute="trailing" secondItem="bB0-iQ-Fl5" secondAttribute="trailing" id="FDq-Dq-6Ct"/>
+                            <constraint firstItem="bB0-iQ-Fl5" firstAttribute="top" secondItem="mlM-0A-M94" secondAttribute="bottom" constant="8" id="hIe-SQ-C8a"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="back" destination="268-3J-BZ4" id="vYC-iB-ErY"/>
+                        <outlet property="handlePaymentButtonTapped" destination="2E1-1Y-HTn" id="Uj3-tH-f0S"/>
                         <outlet property="navbar" destination="bB0-iQ-Fl5" id="7iL-ge-wyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mvi-qF-Uc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2822" y="36"/>
+            <point key="canvasLocation" x="2821.5999999999999" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>
