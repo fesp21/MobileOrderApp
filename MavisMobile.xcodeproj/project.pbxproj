@@ -170,11 +170,11 @@
 		900324F11F55D8CE0081E02A /* MavisMobile */ = {
 			isa = PBXGroup;
 			children = (
+				90A7E5C11F56375500E08E57 /* CheckoutView.swift */,
+				904DE5C51F564415007234C2 /* APIClient.swift */,
 				900324F21F55D8CE0081E02A /* AppDelegate.swift */,
 				9038546E1F55EF27001691F1 /* CustomCell.swift */,
 				9038546B1F55E19C001691F1 /* Menu.swift */,
-				904DE5C51F564415007234C2 /* APIClient.swift */,
-				90A7E5C11F56375500E08E57 /* CheckoutView.swift */,
 				903854701F560848001691F1 /* SelectFromMain.swift */,
 				90A7E59D1F562C5300E08E57 /* OrdersView.swift */,
 				900324F91F55D8CE0081E02A /* Assets.xcassets */,

@@ -449,26 +449,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E1-1Y-HTn">
-                                <rect key="frame" x="89" y="121" width="183" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Handle Payments"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E1-1Y-HTn">
+                                <rect key="frame" x="0.0" y="72" width="375" height="96"/>
+                                <state key="normal" title="Payment"/>
                                 <connections>
                                     <action selector="handlePaymentButtonTapped:" destination="Q4r-cx-GM3" eventType="touchUpInside" id="52s-tr-2gt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyR-HQ-saD">
+                                <rect key="frame" x="0.0" y="176" width="375" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Place Order"/>
+                                <connections>
+                                    <action selector="requestPayment:" destination="Q4r-cx-GM3" eventType="touchUpInside" id="kur-yE-sbI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bB0-iQ-Fl5" firstAttribute="leading" secondItem="KHB-dj-iKo" secondAttribute="leading" id="4ot-2W-hUg"/>
+                            <constraint firstItem="2E1-1Y-HTn" firstAttribute="trailing" secondItem="bB0-iQ-Fl5" secondAttribute="trailing" id="7R2-RU-cii"/>
                             <constraint firstAttribute="trailing" secondItem="bB0-iQ-Fl5" secondAttribute="trailing" id="FDq-Dq-6Ct"/>
+                            <constraint firstItem="2E1-1Y-HTn" firstAttribute="top" secondItem="bB0-iQ-Fl5" secondAttribute="bottom" id="Mbv-ph-XGK"/>
+                            <constraint firstItem="tw9-zI-2b8" firstAttribute="top" secondItem="2E1-1Y-HTn" secondAttribute="bottom" constant="499" id="Rd6-47-gqf"/>
                             <constraint firstItem="bB0-iQ-Fl5" firstAttribute="top" secondItem="mlM-0A-M94" secondAttribute="bottom" constant="8" id="hIe-SQ-C8a"/>
+                            <constraint firstItem="2E1-1Y-HTn" firstAttribute="leading" secondItem="bB0-iQ-Fl5" secondAttribute="leading" id="m12-Qg-1aa"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="back" destination="268-3J-BZ4" id="vYC-iB-ErY"/>
                         <outlet property="handlePaymentButtonTapped" destination="2E1-1Y-HTn" id="Uj3-tH-f0S"/>
                         <outlet property="navbar" destination="bB0-iQ-Fl5" id="7iL-ge-wyv"/>
+                        <outlet property="orderbutton" destination="gyR-HQ-saD" id="ox4-Ju-K8U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mvi-qF-Uc6" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,4 +1,4 @@
-require 'sinatra'
+herorequire 'sinatra'
 require 'stripe'
 
 set :publishable_key, ENV['PUBLISHABLE_KEY']
@@ -8,6 +8,22 @@ Stripe.api_key = settings.secret_key
 
 get '/' do
   erb :index
+end
+
+post '/ephemeral_keys' do
+    authenticate!
+    begin
+        key = Stripe::EphemeralKey.create(
+            {customer: @customer.id},
+            {stripe_version: params["api_version"]}
+        )
+        rescue Stripe::StripeError => e
+            status 402
+        return "Error creating ephemeral key: #{e.message}"
+    end
+    
+    status 200
+    key.to_json
 end
 
 post '/charge' do

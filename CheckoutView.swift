@@ -11,45 +11,14 @@ import Stripe
 import Alamofire
 
 
-class CheckoutView: UIViewController, STPPaymentContextDelegate {
-   /*
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Setup add card view controller
-        //let addCardViewController = STPAddCardViewController()
-        
-      //  addCardViewController.delegate = self as? STPAddCardViewControllerDelegate
-        
-        // Present add card view controller
-       // let navigationController = UINavigationController(rootViewController: addCardViewController)
-        
-        
-        
-        //self.present(vc, animated: true, completion: nil)
-        //present(navigationController, animated: true)
-        
-        // present(addCardViewController, animated: true)
-    }
-*/
+class CheckoutView: UIViewController, STPPaymentContextDelegate, STPPaymentMethodsViewControllerDelegate {
 
     //Controllers
     private let customerContext: STPCustomerContext
     private let paymentContext: STPPaymentContext
+    let serialQueue = DispatchQueue(label: "com.queue.Serial")
 
 
-    
-    //Button
-    @IBOutlet weak var navbar: UINavigationBar!
-    @IBOutlet weak var back: UIBarButtonItem!
-    
-    @IBOutlet weak var handlePaymentButtonTapped: UIButton!
-    
-    @IBAction func handlePaymentButtonTapped(_ sender: Any) {
-        presentPaymentMethodsViewController()
-        
-    }
-    
     // MARK: Init
     required init?(coder aDecoder: NSCoder) {
         customerContext = STPCustomerContext(keyProvider: APIClient.sharedClient)
@@ -61,14 +30,42 @@ class CheckoutView: UIViewController, STPPaymentContextDelegate {
         paymentContext.hostViewController = self
     }
     
+    //Button
+    @IBOutlet weak var navbar: UINavigationBar!
+    @IBOutlet weak var back: UIBarButtonItem!
+    
+    @IBOutlet weak var orderbutton: UIButton!
+    @IBOutlet weak var handlePaymentButtonTapped: UIButton!
+    
+    @IBAction func handlePaymentButtonTapped(_ sender: Any) {
+    /*
+       presentPaymentMethodsVC()
+        // Present the Stripe payment methods view controller to enter payment details
+        // Setup payment methods view controller
+       
+        let paymentMethodsViewController = STPPaymentMethodsViewController(configuration: STPPaymentConfiguration.shared(), theme: STPTheme.default(), customerContext: customerContext, delegate: self as STPPaymentMethodsViewControllerDelegate)
+        
+        // Present payment methods view controller
+        let navigationController = UINavigationController(rootViewController: paymentMethodsViewController)
+        
+        present(navigationController, animated: true)
+      */
+     presentPaymentMethodsVC()
+ 
+    }
+    
+    @IBAction func requestPayment(_ sender: Any) {
+        
+        paymentContext.requestPayment()
+    }
     
     // MARK: Helpers
-    private func presentPaymentMethodsViewController() {
+    private func presentPaymentMethodsVC() {
         guard !STPPaymentConfiguration.shared().publishableKey.isEmpty else {
             // Present error immediately because publishable key needs to be set
             let message = "Please assign a value to `publishableKey` before continuing. See `AppDelegate.swift`."
             print(message)
-          //  present(UIAlertController(message: message), animated: true)
+            //  present(UIAlertController(message: message), animated: true)
             return
         }
         
@@ -80,13 +77,37 @@ class CheckoutView: UIViewController, STPPaymentContextDelegate {
             return
         }
         
-        // Present the Stripe payment methods view controller to enter payment details
         paymentContext.presentPaymentMethodsViewController()
     }
-    
+    // Present the Stripe payment methods view controller to enter payment details
 
+    // MARK: STPPaymentMethodsViewControllerDelegate
+    
+    func paymentMethodsViewController(_ paymentMethodsViewController: STPPaymentMethodsViewController, didFailToLoadWithError error: Error) {
+        // Dismiss payment methods view controller
+     
+        dismiss(animated: true)
+        // Present error to user...
+    }
+    
+    func paymentMethodsViewControllerDidCancel(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
+        // Dismiss payment methods view controller
+        dismiss(animated: true)
+    }
+    
+    func paymentMethodsViewControllerDidFinish(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
+        // Dismiss payment methods view controller
+        dismiss(animated: true)
+    }
+    
+    func paymentMethodsViewController(_ paymentMethodsViewController: STPPaymentMethodsViewController, didSelect paymentMethod: STPPaymentMethod) {
+        // Save selected payment method
+        
+        //selectedPaymentMethod = paymentMethod
+    }
+
+    
     //STPPaymentMethodsDelegate
-   
     // MARK: STPPaymentContextDelegate
     func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
         if let customerKeyError = error as? APIClient.CustomerKeyError {
@@ -104,11 +125,13 @@ class CheckoutView: UIViewController, STPPaymentContextDelegate {
             // Use generic error message
             print("[ERROR]: Unrecognized error while loading payment context: \(error)");
             
+
         }
     }
     
     
     func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
+     
         // Reload related components
       //  reloadPaymentButtonContent()
       //  reloadRequestRideButton()
@@ -163,208 +186,5 @@ class CheckoutView: UIViewController, STPPaymentContextDelegate {
            // rideRequestState = .none
         }
     }
-
-    
-    
-    
-    
-    
-    
     
 }
-
-/*
-    let stripePublishableKey = "pk_test_BAXmaVnR8AmqM0VKrcWYc7We"
- 
-    // MyAPIClient implements STPEphemeralKeyProvider (see above)
-    // let customerContext = STPCustomerContext(keyProvider: MainAPIClient.sharedClient)
-    
-    let backendBaseURL: String? = "https://aqueous-dawn-63582.herokuapp.com/"
-    
-    //STPPaymentContextDelegateMethods
-    //1.
-    func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
-    
-        
-        
-    }
-    
-    let myAPIClient = APIClient()
-    
-    //2. Successfully completed purchase/selected payment method
-    func paymentContext(_ paymentContext: STPPaymentContext,
-                        didCreatePaymentResult paymentResult: STPPaymentResult,
-                        completion: @escaping STPErrorBlock) {
-        
-        myAPIClient.completeCharge(STPPaymentResult.init(), amount: 10, completion: { (error: Error?) in
-            if let error = error {
-                completion(error)
-            } else {
-                completion(nil)
-            }
-        })
-    }
-    
-    func paymentContext(_ paymentContext: STPPaymentContext,
-                        didFinishWith status: STPPaymentStatus,
-                        error: Error?) {
-        
-        switch status {
-        case .error:
-            print("error")
-       //    self.showError(error)
-        case .success:
-            //self.showReceipt()
-            print("success")
-        case .userCancellation: break
-        //    return // Do nothing
-        }
-    }
-    
-    func paymentContext(_ paymentContext: STPPaymentContext,
-                        didFailToLoadWithError error: Error) {
-        self.navigationController?.popViewController(animated: true)
-        // Show the error to your user, etc.
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Setup add card view controller
-        let addCardViewController = STPAddCardViewController()
-        
-        addCardViewController.delegate = self as? STPAddCardViewControllerDelegate
-        
-        // Present add card view controller
-        let navigationController = UINavigationController(rootViewController: addCardViewController)
-        
-        
-        
-        //self.present(vc, animated: true, completion: nil)
-        //present(navigationController, animated: true)
-        
-        // present(addCardViewController, animated: true)
-        
-    }
-    
-    @IBOutlet weak var navbar: UINavigationBar!
-    @IBOutlet weak var back: UIBarButtonItem!
-
-    //move to add payment button action
-    override func viewDidAppear(_ animated: Bool) {
-        // Setup add card view controller
-        let addCardViewController = STPAddCardViewController()
-        addCardViewController.delegate = self as? STPAddCardViewControllerDelegate
-        // Present add card view controller
-        let navigationController = UINavigationController(rootViewController: addCardViewController)
-        present(navigationController, animated: true)
-    }
-    
-    // MARK: STPAddCardViewControllerDelegate
-    func addCardViewControllerDidCancel(_ addCardViewController: STPAddCardViewController) {
-        // Dismiss add card view controller
-        dismiss(animated: true)
-    }
-    
-    
-    func submitTokenToBackend(token: STPToken, completion: (_ error:Error)->()){
-        print("doing this")
-    }
-    
-    func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: @escaping STPErrorBlock) {
-        submitTokenToBackend(token: token, completion: { (error: Error?) in
-            if let error = error {
-                // Show error in add card view controller
-                completion(error)
-            }
-            else {
-                // Notify add card view controller that token creation was handled successfully
-                completion(nil)
-                
-                // Dismiss add card view controller
-                dismiss(animated: true)
-            }
-        })
-    }
-    
-    
-    
-    internal typealias RequestCompletion = (Int?, Error?) -> ()?
-
-    private var completionBlock: RequestCompletion!
-
-    func postStripeToken(token: STPToken) {
-        
-        let URL = "http://localhost/donate/payment.php"
-        let params = ["stripeToken": token.tokenId,
-                      "amount": 10,
-                      "currency": "usd",
-                      "description": "hi"] as [String : Any]
-
-      
-        sessionManager.request(URL, method: .post, parameters: params).validate().responseJSON {  //URL).validate().responseJSON {
-            response in
-            switch response.result {
-            case .success:
-                
-               // print(response.data?.debugDescription ?? <#default value#>)
-               // print(response.response?.debugDescription ?? <#default value#>)
-                
-              //  let UIAlertViewController as UIAler
-                var statusCode = 0
-                if let unwrappedResponse = response.response {
-                    statusCode = unwrappedResponse.statusCode
-                }
-                self.completionBlock(statusCode, nil)
-                
-                break
-            case .failure(let error):
-                print("error - > \n    \(error.localizedDescription) \n")
-                let statusCode = response.response?.statusCode
-                self.completionBlock?(statusCode, error)
-                break
-            }
-        }
-    }
-}
-/*
- //STPPaymentConfiguration.shared().publishableKey =  "pk_test_BAXmaVnR8AmqM0VKrcWYc7We"
- @IBOutlet weak var navBar: UINavigationBar!
- 
- @IBAction func dismissCheckoutView(_ sender: Any) {
- self.dismiss(animated: true, completion: nil)
- }
- 
- @IBOutlet weak var paymentView: UIView!
- 
- //STRIPE Variables
- let paymentCartTextField = STPPaymentCardTextField()
- let stripePublishableKey = "pk_test_BAXmaVnR8AmqM0VKrcWYc7We"
- let backendBaseURL: String? = "https://powerful-hamlet-29531.herokuapp.com/"
- let paymentContext: STPPaymentContext! = nil
- 
- override func viewDidLoad() {
- super.viewDidLoad()
- 
- //set up payment card text field
- paymentCartTextField.delegate = self as? STPPaymentCardTextFieldDelegate
- paymentView.addSubview(paymentCartTextField)
- 
- // Do any additional setup after loading the view, typically from a nib.
- }
- 
- //MARK: STPPaymentCardTextFieldDelegate
- /*
- func paymentCardTextFieldDidChange(_ textField: STPPaymentCardTextField) {
- // Toggle buy button state
- buyButton.enabled = textField.isValid
- }
- */
- 
- override func didReceiveMemoryWarning() {
- super.didReceiveMemoryWarning()
- // Dispose of any resources that can be recreated.
- }
- 
- */
-*/
