@@ -1,10 +1,10 @@
-herorequire 'sinatra'
+require 'sinatra'
 require 'stripe'
 
 set :publishable_key, ENV['PUBLISHABLE_KEY']
 set :secret_key, ENV['SECRET_KEY']
 
-Stripe.api_key = settings.secret_key
+Stripe.api_key = ENV['STRIPE_TEST_SECRET_KEY']
 
 get '/' do
   erb :index
