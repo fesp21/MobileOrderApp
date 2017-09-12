@@ -36,13 +36,13 @@ class APIClient: NSObject, STPEphemeralKeyProvider {
                       //  shippingMethod: PKShippingMethod?,
                         completion: @escaping (OrderError?) -> Void) {
         let url = self.baseURL.appendingPathComponent("charge")
-        /*var params: [String: Any] = [
+       
+        let params: [String: Any] = [
             "source": result.source.stripeID,
             "amount": amount
         ]
-        params["shipping"] = STPAddress.shippingInfoForCharge(with: shippingAddress, shippingMethod: shippingMethod)
-        */
-        Alamofire.request(url, method: .post)//, parameters: params)
+        
+        Alamofire.request(url, method: .post, parameters: params)
             .validate(statusCode: 200..<300)
             .responseString { response in
                 switch response.result {

@@ -28,7 +28,11 @@ end
 
 post '/charge' do
   @amount = 500
-
+  authenticate!
+  
+  # Get the credit card details submitted by the form
+  source = params[:source]
+  
   customer = Stripe::Customer.create(
     :email => 'customer@example.com',
     :card  => params[:stripeToken]
@@ -38,10 +42,32 @@ post '/charge' do
     :amount      => @amount,
     :description => 'Sinatra Charge',
     :currency    => 'usd',
-    :customer    => customer
+    :customer    => customer,
+    :source      => source,
   )
 
   erb :charge
+end
+
+
+def authenticate!
+    # This code simulates "loading the Stripe customer for your current session".
+    # Your own logic will likely look very different.
+    return @customer if @customer
+    if session.has_key?(:customer_id)
+        customer_id = session[:customer_id]
+        begin
+            @customer = Stripe::Customer.retrieve(customer_id)
+            rescue Stripe::InvalidRequestError
+        end
+        else
+        begin
+            @customer = Stripe::Customer.create(:description => "mobile SDK example customer")
+            rescue Stripe::InvalidRequestError
+        end
+        session[:customer_id] = @customer.id
+    end
+    @customer
 end
 
 __END__
